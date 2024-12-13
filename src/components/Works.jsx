@@ -7,6 +7,31 @@ import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 
+
+const ProjectCard = ({index, name ,description, tags, image,
+  source_code_linnk}) => {
+    return(
+      <motion.div
+      variants = {fadeIn('up', 'spring', index*0.5, 0.75)}>
+        <Tilt
+          options = {{
+            max: 45,
+            scale: 1,
+            speed: 450
+          }}
+          className = "bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+            <div className='relative w-full h-[230px]'>
+              <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover rounded-2xl"/>
+            </div>
+        </Tilt>
+      </motion.div>
+    )
+
+}
+
 const Works = () => {
   return (
     <>
@@ -19,7 +44,7 @@ const Works = () => {
         <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className= "mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Following projects demonstrate my experties as a
+          Following projects demonstrates my experties as a
           Developer, Software Engineer, and Tech Enthusiast.
           Each projets is briefly described with link to code
           repositories and live demo in it. It reflects my ability to
@@ -27,6 +52,15 @@ const Works = () => {
           and manage projects effectively.
         </motion.p>
 
+      </div>
+
+      <div className = "mt-20 flex flex-wrap gap-7">
+        {projects.map((project, index) => (
+          <ProjectCard 
+          key = {`project ${index}`}
+          index = {index}
+          {...project}/>
+        ))}
       </div>
     </>
   )
