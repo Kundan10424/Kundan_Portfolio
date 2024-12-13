@@ -19,12 +19,11 @@ const Works = () => {
         <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className= "mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Following projects showcases my skills and 
-          experiences through real-world examples of my work.
-          Each project is briefly described with links to code
-          repositories and live demos in it. It reflects my ability
-          to solve complex problems, work with different technologies, 
-          and manage projects effectively.
+          Following projects demonstrate my experties as a
+          Developer, Software Engineer, and Tech Enthusiast.
+          These projects highlight my ability to create innovative
+          solutions for real-world challenges, blending functionality,
+          with user-friendly design.
         </motion.p>
 
       </div>
