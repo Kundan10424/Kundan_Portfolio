@@ -21,9 +21,10 @@ const Works = () => {
         className= "mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
           Following projects demonstrate my experties as a
           Developer, Software Engineer, and Tech Enthusiast.
-          These projects highlight my ability to create innovative
-          solutions for real-world challenges, blending functionality,
-          with user-friendly design.
+          Each projets is briefly described with link to code
+          repositories and live demo in it. It reflects my ability to
+          solve complex problems, work with different technlogies,
+          and manage projects effectively.
         </motion.p>
 
       </div>
