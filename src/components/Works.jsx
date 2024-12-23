@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from '../utils/motion'
 
 
 const ProjectCard = ({index, name ,description, tags, image,
-  source_code_linnk}) => {
+  source_code_link}) => {
     return(
       <motion.div
       variants = {fadeIn('up', 'spring', index*0.5, 0.75)}>
@@ -25,6 +25,21 @@ const ProjectCard = ({index, name ,description, tags, image,
               src={image}
               alt={name}
               className="w-full h-full object-cover rounded-2xl"/>
+
+              <div className = "absolute inset-0 flex justify-end m-3 card-img_hover">
+                <div 
+                  onClick = {() => window.open
+                    (source_code_link, "_blank")}
+                  className='black-gradient h-10 w-10 
+                  rounded-full flex justify-center 
+                  items-center cursor-pointer'
+                  >
+                      <img
+                      src = {github}
+                      alt='github'
+                      className='h-1/2 w-1/2 object-contain'/>
+                </div>
+              </div>
             </div>
         </Tilt>
       </motion.div>
