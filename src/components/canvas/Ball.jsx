@@ -5,14 +5,14 @@ import CanvasLoader from '../Loader'
 
 const Ball = (props) => {
 
-  const [decal] = useTexture([props.imgUrl])
+  const [decal] = useTexture([props.imgUrl] || "fallback-image.png")
 
   return (
-    <Float speed={1.75} rotationIntensity={1}
-    floatIntensity={2}>
+    <Float speed={1.5} rotationIntensity={0.8}
+    floatIntensity={1.5}>
       <ambientLight intensity={0.25}/>
       <directionalLight position={[0, 0, 0.05]}/>
-      <mesh castShadow receiveShadow scale={2.5}>
+      <mesh castShadow receiveShadow scale={2.5}> 
         <icosahedronGeometry args={[1,1]}/>
         <meshStandardMaterial
         color='#fff8eb'
@@ -33,8 +33,8 @@ const Ball = (props) => {
 const BallCanvas = ({icon}) =>{
   return(
         <Canvas 
-        frameloop='demand'
-        gl={{ preserveDrawingBuffer: true }}
+        frameloop='always'
+        // gl={{ preserveDrawingBuffer: true }}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
@@ -50,3 +50,4 @@ const BallCanvas = ({icon}) =>{
 }
 
 export default BallCanvas
+

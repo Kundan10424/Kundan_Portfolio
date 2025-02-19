@@ -102,62 +102,77 @@ import {
       icon: creator,
     },
   ];
-  
+
   const technologies = [
     {
-      name: "HTML 5",
+      index: 1,
+      name: "html",
       icon: html,
     },
     {
-      name: "CSS 3",
+      index: 2,
+      name: "css",
       icon: css,
     },
     {
-      name: "JavaScript",
+      index: 3,
+      name:"javascript",
       icon: javascript,
     },
     {
-      name: "TypeScript",
+      index: 4,
+      name: "typescript",
       icon: typescript,
     },
     {
-      name: "React JS",
+      index: 5,
+      name: "react",
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
+      index: 6,
+      name: "redux",
       icon: redux,
     },
     {
-      name: "Tailwind CSS",
+      index: 7,
+      name: "tailwind",
       icon: tailwind,
     },
     {
-      name: "Node JS",
+      index: 8,
+      name: "nodejs",
       icon: nodejs,
     },
     {
-      name: "MongoDB",
+      index: 9,
+      name: "mongodb",
       icon: mongodb,
     },
     {
-      name: "Python",
+      index: 10,
+      name: "python",
       icon: python,
     },
     {
+      index: 11,
       name: "git",
       icon: git,
     },
     {
+      index: 12,
       name: "java",
       icon: java,
     },
     {
-      name: "Mysql",
+      index: 13,
+      name: "sql",
       icon: sql,
     },
+
   ];
-  
+ 
+
   const experiences = [
     {
       title: "J.C. Bose UNiversity of Science and Technology",
