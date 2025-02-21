@@ -94,7 +94,7 @@ import {
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "FrontEnd Developer",
       icon: backend,
     },
     {
